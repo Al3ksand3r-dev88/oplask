@@ -9,12 +9,14 @@
 
 <script>
 import { Carousel, Slide } from "vue-carousel";
+import Search from "@/components/Search.vue";
 
 export default {
   name: "Lightbox",
   components: {
     Carousel,
-    Slide
+    Slide,
+    Search
   }
 };
 </script>
