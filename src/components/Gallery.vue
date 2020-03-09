@@ -5,15 +5,10 @@
         <li v-for="image in imageArray.results" :key="image.id">
           <div
             class="image-box"
-            :style="{ backgroundImage: `url(${image.urls.raw})` }"
+            :style="{ backgroundImage: `url(${image.urls.small})` }"
           />
         </li>
       </ul>
-      <div class="pagination">
-        <button v-for="image in imageArray.results" :key="image.id">
-          {{ image.total_pages }}
-        </button>
-      </div>
     </div>
   </div>
 </template>
