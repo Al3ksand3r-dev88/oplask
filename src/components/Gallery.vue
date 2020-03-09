@@ -2,38 +2,49 @@
   <div>
     <div class="gallery-container">
       <ul>
-        <li>1</li>
-        <li>2</li>
-        <li>3</li>
-        <li>4</li>
-        <li>5</li>
-        <li>6</li>
-        <li>7</li>
-        <li>8</li>
-        <li>9</li>
+        <li v-for="image in imageArray.results" :key="image.id">
+          <div
+            class="image-box"
+            :style="{ backgroundImage: `url(${image.urls.raw})` }"
+          />
+        </li>
       </ul>
+      <div class="pagination">
+        <button v-for="image in imageArray.results" :key="image.id">
+          {{ image.total_pages }}
+        </button>
+      </div>
     </div>
   </div>
 </template>
 
 <script>
 export default {
-  name: "Gallery"
+  name: "Gallery",
+  props: ["imageArray"]
 };
 </script>
 
 <style lang="scss" scoped>
 .gallery-container {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(3, 1fr);
-
-  height: 100vh;
-  width: 80%;
+  width: 960px;
   margin: auto;
-  z-index: 100;
-  position: absolute;
-  margin-top: 45rem;
-  margin-left: 8.5rem;
+  ul {
+    gap: 2rem;
+    margin: 4rem 0;
+    display: grid;
+    list-style: none;
+    grid-template-columns: repeat(3, 1fr);
+    li {
+      cursor: pointer;
+      .image-box {
+        width: 300px;
+        height: 300px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+    }
+  }
 }
 </style>

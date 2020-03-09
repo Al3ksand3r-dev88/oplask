@@ -16,7 +16,8 @@ export default {
   name: "Search",
   data() {
     return {
-      searchTerm: ""
+      searchTerm: "",
+      imageArray: []
     };
   },
   methods: {
@@ -29,7 +30,11 @@ export default {
               "Client-ID 8oQ4xsbVsUH7SjX0BdWEOtdbIktuxcCdhmpjAw3LI0E"
           }
         })
-        .then(res => console.log(res.data));
+        .then(res => {
+          this.imageArray = res.data;
+          this.$emit("get-images", this.imageArray);
+        })
+        .catch(err => console.log(err));
     }
   }
 };
