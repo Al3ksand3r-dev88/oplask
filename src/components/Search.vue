@@ -1,5 +1,5 @@
 <template>
-    <di class=''>
+    <div>
 
     </div>
 </template>
