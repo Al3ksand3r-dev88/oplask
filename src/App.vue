@@ -1,8 +1,8 @@
 <template>
   <div>
     <Search @get-images="getImages" />
-    <Lightbox />
-    <Gallery :imageArray="imageArray" />
+    <Lightbox :imageArray="imageArray" />
+    <Gallery @open-modal="openModal" :imageArray="imageArray" />
   </div>
 </template>
 
@@ -25,7 +25,8 @@ export default {
   methods: {
     getImages(getImages) {
       this.imageArray = getImages;
-    }
+    },
+    openModal() {}
   }
 };
 </script>

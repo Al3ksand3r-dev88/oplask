@@ -2,11 +2,8 @@
   <div>
     <div class="gallery-container">
       <ul>
-        <li v-for="image in imageArray.results" :key="image.id">
-          <div
-            class="image-box"
-            :style="{ backgroundImage: `url(${image.urls.small})` }"
-          />
+        <li v-for="image in imageArray.results" :key="image.id" @click="handleClick">
+          <div class="image-box" :style="{ backgroundImage: `url(${image.urls.small})` }" />
         </li>
       </ul>
     </div>
@@ -16,11 +13,22 @@
 <script>
 export default {
   name: "Gallery",
-  props: ["imageArray"]
+  props: ["imageArray"],
+  data(){
+    return {
+      isClicked = false
+    }
+  },
+  methods: {
+    handleClick() {
+      this.isClicked = !this.isClicked
+      this.$emit('open-modal', this.isClicked)
+    }
+  }
 };
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 .gallery-container {
   width: 960px;
   margin: auto;

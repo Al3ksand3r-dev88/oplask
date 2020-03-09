@@ -1,8 +1,9 @@
 <template>
   <div>
-    <carousel class="carousel-slider">
-      <slide>Slide 1 Content</slide>
-      <slide>Slide 2 Content</slide>
+    <carousel :class="{open: isClicked}" class="carousel-slider" perPage="1">
+      <slide v-for="image in imageArray.results" :key="image.id">
+        <img :src="image.urls.small" />
+      </slide>
     </carousel>
   </div>
 </template>
@@ -10,13 +11,12 @@
 <script>
 import { Carousel, Slide } from "vue-carousel";
 
-
 export default {
   name: "Lightbox",
+  props: ["imageArray"],
   components: {
     Carousel,
-    Slide,
-   
+    Slide
   }
 };
 </script>
