@@ -17,13 +17,9 @@ export default {
     Lightbox,
     Gallery,
     Search,
-
-<div class="wrapper">
-
-</div>
-</template>
-
-
+  }
+}  
+</script>
 <style lang="scss" scoped>
 @import url("https://fonts.googleapis.com/css?family=Poppins&display=swap");
 
@@ -37,7 +33,7 @@ export default {
   display: flex;
   width: 100%;
   height: 100vh;
-
+  }
 }
 
 </style>
