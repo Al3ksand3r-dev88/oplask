@@ -1,5 +1,7 @@
 <template>
+
   <div>
+      <Search />
     <Lightbox />
     <Gallery />
   </div>
@@ -8,15 +10,19 @@
 <script>
 import Lightbox from "@/components/Lightbox.vue";
 import Gallery from "@/components/Gallery.vue";
-
+import Search from '@/components/Search.vue'; 
 export default {
   name: "App",
   components: {
     Lightbox,
-    Gallery
-  }
-};
-</script>
+    Gallery,
+    Search,
+
+<div class="wrapper">
+
+</div>
+</template>
+
 
 <style lang="scss" scoped>
 @import url("https://fonts.googleapis.com/css?family=Poppins&display=swap");
@@ -27,5 +33,11 @@ export default {
   padding: 0;
 
   font-family: "Poppins", sans-serif;
+  .wrapper{
+  display: flex;
+  width: 100%;
+  height: 100vh;
+
 }
+
 </style>
