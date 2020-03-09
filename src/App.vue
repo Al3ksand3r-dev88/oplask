@@ -4,6 +4,8 @@
       <Search />
     <Lightbox />
     <Gallery />
+    <Pager />
+
   </div>
 </template>
 
@@ -11,12 +13,15 @@
 import Lightbox from "@/components/Lightbox.vue";
 import Gallery from "@/components/Gallery.vue";
 import Search from '@/components/Search.vue'; 
+import Pager from '@/components/Pager.vue'; 
+
 export default {
   name: "App",
   components: {
     Lightbox,
     Gallery,
     Search,
+    Pager
   }
 }  
 </script>
