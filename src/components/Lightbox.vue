@@ -10,11 +10,13 @@
 <script>
 import { Carousel, Slide } from "vue-carousel";
 
+
 export default {
   name: "Lightbox",
   components: {
     Carousel,
-    Slide
+    Slide,
+   
   }
 };
 </script>
