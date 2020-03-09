@@ -4,8 +4,9 @@
 
 <script>
 export default {
-  name: "App"
+  name: "Pager"
 };
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+</style>
