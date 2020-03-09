@@ -1,5 +1,7 @@
 <template>
-  <div></div>
+<div class="app">
+  
+</div>
 </template>
 
 <script>
@@ -7,6 +9,3 @@ export default {
   name: "Pager"
 };
 </script>
-
-<style lang="scss" scoped>
-</style>
